@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="Validform.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+
+
+</head>
+
+<body>
+
+<!--
+
+	<input class="verify_notnull"  notnull="提示信息" >
+	<input class="verify_length"  lengthmsg="提示信息" length="3-9" >
+	<input class="verify_mobile" mobilemsg="请输出正确的手机号码" />
+	<input class="verify_email" emailmsg="邮箱输入有误"  />
+	<input class="verify_phone" phonemsg="电话号码输入有误" value="" />
+	<input type="text"  class="aa" /></br>
+	<input type="text"  class="verify_recheck" verify_recheck=".aa" recheckmsg="两次输入不一致" value="" />
+	<input type="text"  class="verify_characters" charactersmsg="只允许为汉字" value="" />
+	<input type="txt" class="verify_figure"   figuremsg="不为空时只能是数字"  />
+
+-->
+
+<form id="check_form" method="post">
+
+    <input class="verify_notnull" notnull="不许为空" value="" />
+   
+    <input type="submit" value="提交" />
+
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+<script>
+/*
+
+	demo 1:
+		//表单在提交时验证
+		$('#check_form').Validform();	
+		//调用这个方法是直接验证
+		$('#check_form').Validform(1);
+
+	demo 2:
+		//自定义错误提示
+		//默认layer  如果不支持则使用alert 
+		var v_alert = function(message){
+			alert(message);
+		}
+
+		$('#check_form').Validform({
+			auto : 1,	//1：直接进行验证，否：表单在提交时进行验证
+			
+			//验证前置方法
+			before : function(response){
+				
+				return true;
+			},
+			//验证后置方法
+			after : function(response){
+				
+				//return true;
+			}
+		});
+		
+		before,after方法可以放自定义验证，返回值为true时验证通过，否则将视为不通过
+		response ：表单对象
+		
+*/
+
+$('#check_form').Validform();
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
