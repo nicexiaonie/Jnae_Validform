@@ -13,6 +13,7 @@
 <body>
 
 <!--
+不支持单选框，复选框
 
 	<input class="verify_notnull"  notnull="提示信息" >
 	<input class="verify_length"  lengthmsg="提示信息" length="3-9" >
@@ -28,7 +29,11 @@
 
 <form id="check_form" method="post">
 
-    <input class="verify_notnull" notnull="不许为空" value="" />
+    
+    <select name="aa" class="verify_notnull" notnull="提示信息">
+    	<option value="">asdf </option>
+        <option value="1">asdf </option>
+    </select>
    
     <input type="submit" value="提交" />
 
